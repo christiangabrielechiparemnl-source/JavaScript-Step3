@@ -1,0 +1,30 @@
+<!DOCTYPE html> <!-- Standard HTML5 declaration node -->
+<html lang="en"> <!-- Sets the document language to English -->
+<head> <!-- Metadata and linked styling section -->
+  <meta charset="UTF-8"> <!-- UTF-8 character metadata declaration -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport scale responsive instruction -->
+  <title>Job Qualification Checker</title> <!-- Window title -->
+  <link rel="stylesheet" href="logical.css"> <!-- Links the external CSS file -->
+</head> <!-- End of head section -->
+<body> <!-- Main page markup -->
+
+  <div class="card"> <!-- Display wrapper box -->
+    <h2>Job Qualification Checker</h2> <!-- Activity topic title -->
+    <p id="jobResult">Click button to check qualification.</p> <!-- Output text node -->
+    <button onclick="checkResult()">Check Qualification</button> <!-- Verification action button -->
+  </div> <!-- End of wrapper -->
+
+  <script>
+    function checkResult() { // Declares the function that evaluates the qualification rules
+      let age = 22; // Sets the candidate age to 22
+      let hasDegree = true; // Sets the boolean variable hasDegree to true
+      let hasExperience = false; // Sets the boolean variable hasExperience to false
+      let standardQualified = age >= 18 && hasDegree; // Logical AND (&&) needs both true: 22 >= 18 and degree (true)
+      let flexibleQualified = age >= 18 && (hasDegree || hasExperience); // AND (&&) with OR (||): age passes and degree or experience is true (true)
+
+      document.getElementById("jobResult").innerText = "Standard Qualified: " + standardQualified + " | Flexible Qualified: " + flexibleQualified; // Displays both qualification results on screen
+    } // End of function
+  </script> <!-- End of JavaScript block -->
+
+</body> <!-- End of body section -->
+</html> <!-- End of HTML document -->

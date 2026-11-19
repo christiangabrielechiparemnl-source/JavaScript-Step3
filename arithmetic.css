@@ -1,0 +1,3 @@
+body { font-family: Arial, sans-serif; text-align: center; margin-top: 40px; background-color: #f4f4f4; } /* Page background and centered layout */
+    .container { background-color: #ffffff; padding: 25px; border-radius: 8px; display: inline-block; box-shadow: 0 0 10px rgba(0,0,0,0.1); } /* Central container box */
+    #output { font-size: 18px; font-weight: bold; color: #333; margin-top: 15px; } /* Output text style */

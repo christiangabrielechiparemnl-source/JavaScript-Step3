@@ -1,0 +1,31 @@
+<!DOCTYPE html> <!-- Standard HTML5 document type declaration -->
+<html lang="en"> <!-- Sets the document language to English -->
+<head> <!-- Metadata and linked styling section -->
+  <meta charset="UTF-8"> <!-- Character encoding for universal text display -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive sizing for mobile devices -->
+  <title>Restaurant Bill Calculator</title> <!-- Browser tab title -->
+  <link rel="stylesheet" href="arithmetic.css"> <!-- Links the external CSS file -->
+</head> <!-- End of head section -->
+<body> <!-- Visible page content starts -->
+
+  <div class="container"> <!-- Wrapper card for the activity -->
+    <h2>Arithmetic Operators: Restaurant Bill</h2> <!-- Main activity header -->
+    <p id="output">Click the button to process the bill calculation.</p> <!-- Placeholder for output text -->
+    <button onclick="calculateBill()">Calculate Total</button> <!-- Button that runs the function -->
+  </div> <!-- End of container -->
+
+  <script>
+    function calculateBill() { // Declares the function that performs the bill math
+      let foodBill = 850; // Sets the food bill to 850
+      let drinkBill = 150; // Sets the drink bill to 150
+      let subtotal = foodBill + drinkBill; // Addition (+) computes the subtotal (1000)
+      let tax = subtotal * 0.12; // Multiplication (*) computes 12% tax (120)
+      let promoVoucher = 100; // Sets the promo voucher value to 100
+      let finalBill = subtotal + tax - promoVoucher; // Addition (+) adds tax, subtraction (-) removes voucher (1020)
+
+      document.getElementById("output").innerHTML = "FoodBill: ₱" + foodBill + " | DrinkBill: ₱" + drinkBill + " | Subtotal: ₱" + subtotal + " | Tax: ₱" + tax + " | PromoVoucher: ₱" + promoVoucher + " | FinalBill: ₱" + finalBill; // Displays all values on screen
+    } // End of function
+  </script> <!-- End of JavaScript block -->
+
+</body> <!-- End of body section -->
+</html> <!-- End of HTML document -->

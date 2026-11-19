@@ -1,0 +1,32 @@
+<!DOCTYPE html> <!-- Standard HTML5 document type definition -->
+<html lang="en"> <!-- Sets the document language to English -->
+<head> <!-- Container for metadata and linked styling -->
+  <meta charset="UTF-8"> <!-- Character encoding declaration -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport metadata for screen scaling -->
+  <title>Wallet Manager</title> <!-- Web page title -->
+  <link rel="stylesheet" href="assignment.css"> <!-- Links the external CSS file -->
+</head> <!-- Head section end -->
+<body> <!-- Body section start -->
+
+  <div class="box"> <!-- Card container element -->
+    <h2>Wallet Manager</h2> <!-- Section header -->
+    <p id="balanceDisplay">Balance: 0</p> <!-- Text container for balance display -->
+    <button onclick="updateBalance()">Update Balance</button> <!-- Action button to execute the function -->
+  </div> <!-- Card container end -->
+
+  <script>
+    function updateBalance() { // Declares the wallet balance function
+      let balance = 1000; // Assignment operator (=) sets the initial balance to 1000
+      let step1 = balance; // Saves the initial balance (1000)
+      balance += 500; // Addition assignment (+=) adds the cash deposit (now 1500)
+      let step2 = balance; // Saves the balance after the deposit (1500)
+      balance -= 300; // Subtraction assignment (-=) subtracts the bill payment (now 1200)
+      let step3 = balance; // Saves the balance after the payment (1200)
+      balance *= 2; // Multiplication assignment (*=) applies the 2x investment multiplier (now 2400)
+
+      document.getElementById("balanceDisplay").innerHTML = "Initial Balance: ₱" + step1 + "<br>After Deposit (+= 500): ₱" + step2 + "<br>After Bill Payment (-= 300): ₱" + step3 + "<br>After Investment (*= 2): ₱" + balance; // Displays each balance step on its own line
+    } // Function end
+  </script> <!-- Script end -->
+
+</body> <!-- Body section end -->
+</html> <!-- Document end -->

@@ -1,0 +1,16 @@
+/* Page background and container styling */
+body {
+  font-family: Arial, sans-serif; /* Sets the page font */
+  text-align: center; /* Centers all text */
+  margin-top: 40px; /* Space above the content */
+  background-color: #f7f7f7; /* Light gray page background */
+}
+
+/* Styles the card layout container */
+.card {
+  background: white; /* White card background */
+  padding: 25px; /* Space inside the card */
+  border-radius: 8px; /* Rounded card corners */
+  display: inline-block; /* Shrinks the card to fit its content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow around the card */
+}

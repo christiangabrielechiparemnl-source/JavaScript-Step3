@@ -1,0 +1,16 @@
+/* Layout style tag */
+body {
+  font-family: Arial, sans-serif; /* Sets the page font */
+  text-align: center; /* Centers all text */
+  margin-top: 40px; /* Space above the content */
+  background-color: #fafafa; /* Light gray page background */
+}
+
+/* Styling for the container layout */
+.card {
+  background: white; /* White card background */
+  padding: 25px; /* Space inside the card */
+  border-radius: 8px; /* Rounded card corners */
+  display: inline-block; /* Shrinks the card to fit its content */
+  border: 1px solid #ddd; /* Thin gray card border */
+}

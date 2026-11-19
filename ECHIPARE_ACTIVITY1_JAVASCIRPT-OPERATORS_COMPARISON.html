@@ -1,0 +1,29 @@
+<!DOCTYPE html> <!-- HTML5 page format declaration -->
+<html lang="en"> <!-- Sets the document language to English -->
+<head> <!-- Metadata and linked styling configuration -->
+  <meta charset="UTF-8"> <!-- Standard character encoding declaration -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile viewport normalization tag -->
+  <title>Grade Verification Demo</title> <!-- Web browser window title -->
+  <link rel="stylesheet" href="comparison.css"> <!-- Links the external CSS file -->
+</head> <!-- End of head section -->
+<body> <!-- Main page markup container -->
+
+  <div class="card"> <!-- Content wrapper -->
+    <h2>Grade Verification</h2> <!-- Section heading -->
+    <p id="result">Click button to check the grade.</p> <!-- Output text tag -->
+    <button onclick="checkGrade()">Grade</button> <!-- Processing trigger button -->
+  </div> <!-- End of wrapper -->
+
+  <script>
+    function checkGrade() { // Declares the function for the grade comparison logic
+      let studentScore = 75; // Sets the student score to the number 75
+      let loose = studentScore == "75"; // Loose equality (==) compares values only, 75 == "75" (true)
+      let strict = studentScore === "75"; // Strict equality (===) compares value and type, 75 === "75" (false)
+      let passing = studentScore >= 75; // Greater than or equal operator (>=) checks 75 >= 75 (true)
+
+      document.getElementById("result").innerHTML = "Student Score: " + studentScore + " | Loose (==): " + loose + " | Strict (===): " + strict + " | Passing (>=): " + passing; // Displays all boolean results on screen
+    } // End of function
+  </script> <!-- End of JavaScript block -->
+
+</body> <!-- End of body section -->
+</html> <!-- End of HTML document -->
